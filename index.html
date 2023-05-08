@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rock-paper-scissors.css">
+  <script type="text/javascript" src="rock-paper-scissors.js">    
+  </script>
+  <title>Game " rock - paper - scisser "</title>
+</head>
+<body>
+  <!-- 
+    algorithm to this game 
+    when click a button : 
+    1 - computer randomly selects a move
+    2 - compare the moves to get the result 
+    3 - Update a score 
+    4 - display the result in a popup 
+
+  -->
+  <h1>Rock - Paper - Scisser</h1>
+  <div class="game">
+    
+    <button onclick="playGame('rock')">
+      <img src="img/rock-emoji.png" alt="rock" class="rock">
+    </button>
+    <button onclick="playGame('paper')">
+      <img src="img/paper-emoji.png" alt="paper" class="paper">
+    </button>
+    <button onclick="playGame('scisser')">
+      <img src="img/scissors-emoji.png" alt="scisser" class="scisser">
+    </button>
+    <button onclick="restart()" class="restart">Restart</button>
+  </div>
+  <div class="score-result">
+    <div class="result-final" id="result-final">
+      Let's Play
+    </div>
+    <div class="result-final" id="score">
+      score
+    </div>
+  </div>
+  
+  
+    
+</body>
+</html>
