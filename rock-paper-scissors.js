@@ -1,9 +1,4 @@
-const score = {
-  wins: 0,
-  losses: 0,
-  ties: 0
-};
-
+const score = JSON.parse(localStorage.getItem('score'));
 
 function playGame(playerMove){
   const computerMove = picComputerMove()
@@ -44,11 +39,12 @@ function playGame(playerMove){
     }else if (result === 'Tie'){
       score.ties += 1;
     }
+    
+    localStorage.setItem('score', JSON.stringify(score));
 
-
-    /* alert for result */    
+    /* div */    
     document.getElementById('result-final').innerText = `You picked ${playerMove}\nComputer picked ${computerMove}\n${result}`
-    /*alert(`you picked ${playerMove}.\nComputer picked ${computerMove}\n.${result}`)*/
+    /* div */
     document.getElementById('score').innerText = `Wins = ${score.wins}\nLose = ${score.losses}\nTie = ${score.ties}`; 
     
     /*document.getElementById('result-final1').innerText = score.losses;
